@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ /*
+  ~ *  Created Aakarshak on 19/12/20 9:29 PM
+  ~ *  Copyright Ⓒ 2020. All rights reserved Ⓒ 2020
+  ~ *  Last modified: 19/12/20 9:29 PM
+  ~ *
+  ~ *  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  ~ *  except in compliance with the License. You may obtain a copy of the License at
+  ~ *  http://www.apache.org/licenses/LICENS... Unless required by applicable law or agreed to in writing, software
+  ~ *   distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+  ~ *   either express or implied. See the License for the specific language governing permissions and
+  ~ *   limitations under the License.
+  ~ */
+  -->
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.restore.backup.example.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:gravity="center"
+                    android:text="@string/backup"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/folder_apps"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.2"
+                    android:contentDescription="@string/app_image"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_folder_special_white_24dp" />
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/app_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="100dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"></androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/colorBlack"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/chandigarh_university"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
